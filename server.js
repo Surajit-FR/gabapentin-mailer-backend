@@ -1,10 +1,14 @@
 import express from 'express';
 import nodemailer from 'nodemailer';
 import cors from 'cors';
+import { orderMailer } from './contactFormController.js';
+// const {orderMailer} = require("./controller/contactFormController")
+
 const app = express();
 const port = process.env.PORT || 5000;
 app.use(cors())
 app.use(express.json())
+
 var transport = {
   name: 'gabapentin',
   host: 'mail.gabapentinshop.com',
@@ -16,7 +20,7 @@ var transport = {
   }
 }
 
-var transporter = nodemailer.createTransport(transport)
+export const transporter = nodemailer.createTransport(transport)
 
 transporter.verify((error, success) => {
   if (error) {
@@ -26,32 +30,7 @@ transporter.verify((error, success) => {
   }
 });
 
-app.post('/express_backend', async (req, res, next) => {
-
-const {name, email,phone,message} = req.body
-console.log(name, email,phone,message)
-  var mail = {
-    from: "Gabapentin <admin@gabapentinshop.com>",
-    to: "admin@gabapentinshop.com",
-    subject: 'Contact form request',
-    html: `<html>
- <body>
-
- <p> ${name} is trying to contact. </p>
-  <p>email : ${email} </p>
-  <p>phone : ${phone} </p>
-  <p>message : ${message} </p>
- </body>
-</html>`
-  }
-// res.send({ msg: 'success' })
-  const info = await transporter.sendMail(mail)
-  if (info.messageId) {
-    res.send({ msg: 'success' })
-  } else {
-    res.send({ msg: 'fail' })
-  }
-})
+app.post('/express_backend', orderMailer)
 // console.log that your server is up and running
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
@@ -59,3 +38,4 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 app.get('/express_backend', (req, res) => {
   res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
 });
+
