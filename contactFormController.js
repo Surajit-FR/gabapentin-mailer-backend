@@ -53,7 +53,7 @@ export const orderMailer = async (req, res, next) => {
     </tr>
      <tr>
         <th style="font-size:18px; color:#000; line-height:20px; font-weight:400; text-align:left; width:100%; padding:0 0 5px 0; margin:0;">
-        <b>Name:</b> Gournag Sana</th>
+        <b>Name:</b> ${name}</th>
      </tr>
     <tr>
         <th style="font-size:18px; color:#000; line-height:20px; font-weight:400; text-align:left; width:100%; padding:0 0 5px 0; margin:0;">
