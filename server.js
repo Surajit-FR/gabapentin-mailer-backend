@@ -32,7 +32,7 @@ const {name, email,phone,message} = req.body
 console.log(name, email,phone,message)
   var mail = {
     from: "Gabapentin <admin@gabapentinshop.com>",
-    to: "arpan.tarafder@ariprodesigns.com",
+    to: "admin@gabapentinshop.com",
     subject: 'Contact form request',
     html: `<html>
  <body>
