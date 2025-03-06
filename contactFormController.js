@@ -7,7 +7,7 @@ export const orderMailer = async (req, res, next) => {
 
     const mailToAdmin = {
         from: "Gabapentin <admin@gabapentinshop.com>",
-        to: "admin@gabapentinshop.com,support@gabapentinshop.com",
+        to: "admin@gabapentinshop.com, support@gabapentinshop.com",
         subject: "Contact form request",
         html: 
         `
