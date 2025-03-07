@@ -1,7 +1,8 @@
 import express from 'express';
 import nodemailer from 'nodemailer';
 import cors from 'cors';
-import { orderMailer } from './contactFormController.js';
+import { contactMailer } from './contactFormController.js';
+import {orderMailer} from './orderMainController.js'
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -29,8 +30,8 @@ transporter.verify((error, success) => {
   }
 });
 
-app.post('/api/express_backend', orderMailer)
-app.post('/order_mail', orderMailer)
+app.post('/api/express_backend', contactMailer)
+app.post('/api/order_mail', orderMailer)
 // console.log that your server is up and running
 app.listen(port, () => console.log(`Listening on port ${port}`));
 

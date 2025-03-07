@@ -2,7 +2,7 @@ import { transporter } from "./server.js";
 
 // const transporter = require("../server.js")
 
-export const orderMailer = async (req, res, next) => {
+export const contactMailer = async (req, res, next) => {
     const { name, email, phone, message } = req.body;
 
     const mailToAdmin = {
