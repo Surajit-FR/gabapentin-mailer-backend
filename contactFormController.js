@@ -7,7 +7,7 @@ export const orderMailer = async (req, res, next) => {
 
     const mailToAdmin = {
         from: "Gabapentin <admin@gabapentinshop.com>",
-        to: "admin@gabapentinshop.com, support@gabapentinshop.com",
+        to: "arpan.tarafder@ariprodesigns.com",
         subject: "Contact form request",
         html: 
         `
@@ -72,8 +72,8 @@ export const orderMailer = async (req, res, next) => {
    
 </table>
 <div>
-    <p style="margin:0; paffing:0;">Best Regards</p>
-    <p style="margin:0; paffing:0;">
+    <p style="margin:0;">Best Regards</p>
+    <p style="margin:0;">
         <b>Gabapentinshop</b>
     </p>
 </div>
