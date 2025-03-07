@@ -132,7 +132,7 @@ export const orderMailer = async (req, res, next) => {
 <table style="max-width:767px; width:100%; margin:0 auto; border:1px solid #ddd; padding:20px;">
     <tr>
         <th style="font-size:22px; color:#000; line-height:28px; text-align:left; width:100%; padding:0 0 5px 0; margin:0;">
-        Thank You for Shopping from choosing Gabapentinshop
+        Thank You for Shopping from Gabapentinshop
         </th>
     </tr>
      <tr>
