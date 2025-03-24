@@ -27,7 +27,7 @@ export const orderMailer = async (req, res, next) => {
         from: "Gabapentin <admin@gabapentinshop.com>",
         to: "admin@gabapentinshop.com, support@gabapentinshop.com",
         // to: 'arpan.tarafder@ariprodesigns.com',
-        subject: "Contact form request",
+        subject: "New Order",
         html:
             `
 <table style="max-width:767px; width:100%; margin:0 auto; border:1px solid #ddd; padding:20px;">
