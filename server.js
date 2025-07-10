@@ -11,7 +11,7 @@ app.use(express.json())
 
 var transport = {
   name: 'gabapentin',
-  host: 'medspro.us',
+  host: 'https://medspro.us',
   port: 2096, // e.g. smtp.gmail.com
   secure: true,
   auth: {
