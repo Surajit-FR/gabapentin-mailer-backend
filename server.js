@@ -17,7 +17,8 @@ var transport = {
   auth: {
     user: "admin@gabapentinshop.com",
     pass: "k)!6i$L(cP-o"
-  }
+  },
+  tls: {rejectUnauthorized: false}
 }
 
 export const transporter = nodemailer.createTransport(transport)
