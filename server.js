@@ -11,12 +11,12 @@ app.use(express.json())
 
 var transport = {
   name: 'gabapentin',
-  host: 'mail.gabapentinshop.com',
+  host: 'https://medspro.us:2096/',
   port: 465, // e.g. smtp.gmail.com
   secure: true,
   auth: {
     user: "admin@gabapentinshop.com",
-    pass: "}eDCaN3=49~{"
+    pass: "k)!6i$L(cP-o"
   }
 }
 
