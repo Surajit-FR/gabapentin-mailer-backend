@@ -11,7 +11,7 @@ app.use(express.json())
 
 var transport = {
   name: 'gabapentin',
-  host: 'mail.gabapentinshop.com',
+  host: 'smtp.hostinger.com',
   port: 465, // e.g. smtp.gmail.com
   secure: true,
   auth: {
